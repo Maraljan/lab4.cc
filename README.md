@@ -31,20 +31,25 @@ if ((infile = fopen(argv[2], "rt")) == NULL)
   }
 
   
+  
   if ((pipe_fp = popen(argv[1], "w")) == NULL)
   {
-    perror("popen");
+  
+  perror("popen");
     exit(1);
   }
 
 
+  
   do {
     fgets(readbuf, 80, infile);
     if (feof(infile)) break;
     fputs(readbuf, pipe_fp);
   } while(!feof(infile));
 
+  
   fclose(infile);
   pclose(pipe_fp);
+  
   return 0;
 }
