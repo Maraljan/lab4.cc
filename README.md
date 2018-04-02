@@ -1,4 +1,8 @@
 ![](noora.png)# lab4.cc
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
